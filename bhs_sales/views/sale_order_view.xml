@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="bhs_sale_order_tree_inherit" model="ir.ui.view">
+        <field name="name">bhs.sale.order.tree.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="attributes">
+                <attribute name="default_order">eom_accumulation desc</attribute>
+            </xpath>
+            <xpath expr="//field[@name='amount_total']" position="after">
+                <field name="amount_total_main" sum="Total in main currency" widget="monetary" optional="show"/>
+                <field name="eom_accumulation" widget="date" optional="show"/>
+                <field name="company_currency_id" column_invisible="True"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="bhs_sale_order_view_search_inherit_quotation" model="ir.ui.view">
+        <field name="name">bhs.sale.order.search.inherit.quotation</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.sale_order_view_search_inherit_quotation"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='filter_create_date']" position="after">
+                <separator/>
+                <filter string="EOM Accumulation" name="filter_eom_accumulation" date="eom_accumulation"/>
+            </xpath>
+            <xpath expr="//filter[@name='order_month']" position="after">
+                <filter string="EOM Accumulation" name="eom_accumulation_month" domain="[]" context="{'group_by': 'eom_accumulation'}"/>
+            </xpath>
+        </field>
+    </record>
+
+
+    <record id="bhs_view_order_form_inherit" model="ir.ui.view">
+        <field name="name">bhs.sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='validity_date']" position="before">
+                <field name="eom_accumulation" readonly="state in ['sale','cancel']"/>
+            </xpath>
+            <xpath expr="//field[@name='order_line']//tree//field[@name='product_id']" position="before">
+                <field name="bhs_project_id"/>
+            </xpath>
+            <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <field name="change_line_by_pricelist"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
