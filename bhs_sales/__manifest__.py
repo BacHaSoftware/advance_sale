@@ -18,7 +18,7 @@
     ],
     'demo': [],
     "external_dependencies": {},
-    'images': ['static/description/banner.gif'],
+    'images': ['static/description/banner.png'],
     'installable': True,
     'application': False,
     'auto_install': False,
