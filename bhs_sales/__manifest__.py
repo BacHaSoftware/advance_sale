@@ -11,7 +11,7 @@
     'sequence': 75,
     'summary': 'Manage your BHS sale',
     'description': "Create and manage your sale",
-    'depends': ['sale'],
+    'depends': ['sale','sale_management','project'],
     'data': [
         'views/sale_order_view.xml',
         'views/sale_report_view.xml'

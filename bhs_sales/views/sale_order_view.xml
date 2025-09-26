@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="bhs_sale_order_tree_inherit" model="ir.ui.view">
         <field name="name">bhs.sale.order.tree.inherit</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.sale_order_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//tree" position="attributes">
+            <xpath expr="//list" position="attributes">
                 <attribute name="default_order">eom_accumulation desc</attribute>
             </xpath>
             <xpath expr="//field[@name='amount_total']" position="after">
@@ -40,7 +39,7 @@
             <xpath expr="//field[@name='validity_date']" position="before">
                 <field name="eom_accumulation" readonly="state in ['sale','cancel']"/>
             </xpath>
-            <xpath expr="//field[@name='order_line']//tree//field[@name='product_id']" position="before">
+            <xpath expr="//field[@name='order_line']//list//field[@name='product_id']" position="before">
                 <field name="bhs_project_id"/>
             </xpath>
             <xpath expr="//field[@name='partner_shipping_id']" position="after">
