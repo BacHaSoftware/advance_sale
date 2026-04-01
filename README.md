@@ -150,7 +150,7 @@ Project Link: [https://github.com/BacHaSoftware/advance_sale](https://github.com
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[license-url]: https://github.com/BacHaSoftware/advance_sale/blob/18.0/LICENSE.txt
+[license-url]: https://github.com/BacHaSoftware/advance_sale/blob/19.0/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/company/bac-ha-software
 [website-shield]: https://img.shields.io/badge/-website-black.svg?style=for-the-badge&logo=website&colorB=555
