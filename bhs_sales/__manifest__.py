@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 
 {
-    'name': 'Custom for Sales',
+    'name': 'Sales Order EOM Automation',
     'author': 'Bac Ha Software',
     'website': 'https://bachasoftware.com',
     'maintainer': 'Bac Ha Software',
