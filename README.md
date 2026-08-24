@@ -8,7 +8,7 @@
     <img src="/bhs_sales/static/description/icon.png" alt="Logo" width="80" height="80">
   </a>
 
-  <h3 align="center">Custom for Sales</h3>
+  <h3 align="center">Sales Order EOM Automation</h3>
 
   <p align="center">
     A product of Bac Ha Software provides a comprehensive solution to problems related to sale orders.
